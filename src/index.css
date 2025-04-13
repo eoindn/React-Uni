@@ -44,9 +44,26 @@
   --pink-dark: #e91e63; /* Dark Pink */
 }
 
+.titlename {
+  font-size: 5em;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black; 
 
+}
+
+
+
+    
 
 .navbar {
+  position: sticky;
+  top:0;
+  z-index: 1000;
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,6 +72,7 @@
   font-family: 'Roboto', sans-serif;
   padding: 1rem 2rem;
   height: 50px;
+  justify-content: center;
 
   
 
@@ -70,6 +88,7 @@
 }
 
 .navbar ul {
+  position: sticky;
   display: flex;
   justify-content: center;
   list-style: none;
@@ -79,12 +98,16 @@
 
 .navbar li {
   margin: 0 15px; 
+  align-items: center;
 }
 
 .navbar a {
+  display: flex;
   text-decoration: none;
+  justify-content: center;
+  text-align: center;
   color: #000;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -104,17 +127,19 @@
   outline: none;
 }
 
+.navbar h1{
+  display: flex;
+  justify-content: center;
+
+}
 
 
 
 
-
-
-h1{
+.slogan{
 
   display: flex;
   justify-content: center;
-  margin-top: 100px;
   font-family: 'Roboto', sans-serif;
   background: linear-gradient(90deg,
   #cb03ce 0%,
@@ -158,8 +183,12 @@ h1{
 
 .search{
   padding: 5px;
+  position:relative;
   border-radius: 10px;
   border: 1px solid #007bff;
+  margin-left: 20px;
+  margin-bottom:x;
+  margin-bottom: 0px;
 }
 
 body{
@@ -184,29 +213,7 @@ section{
   bottom: 0;
 }
 
-/* .curve::before{
-  content: '';
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 55%;
-  height: 100%;
-  background-color: var(--blue);
-  transform: translate(85%,60%);
-}
-
-.curve::after{
-  content: '';
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 55%;
-  height: 100%;
-  background-color:var(--text-dark);
-  transform: translate(-4%,40%);
-  z-index: -1;
-
-} */
+/*------------------------------------BMI--------------------------------- */
 
 
 .bmi-calculator {
@@ -356,46 +363,45 @@ button:hover {
   margin: 4px 0;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 600px) {
   .bmi-calculator {
     margin: 20px;
     padding: 16px;
   }
 }
-
+/*------------------------------------Home DECO--------------------------------- */
 .doctor-container {
   position: relative;
   width: 100%;
   height: 700px;
-  margin-top: 50px; /* Space after navbar */
+  margin-top: 0px; /* Space after navbar */
+  border-radius: 30px;
 }
 
 .doctor {
-  width: 100%;
+  width: 90%;
   height: 100%;
-  object-fit: cover; /* This ensures the image covers the container properly */
+  object-fit: cover;
   display: block;
+  border-radius: 20px;
+  border: #000;
+  border-width: 100px;
+  border-radius: 30px;
+  margin-left: 70px;
+
 }
 
-.info_box {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-150%, -50%);
-  display: flex;
-  flex-direction: column;
-  
-  text-align: left;
-  width: 100%;
-  height: 40%;
-  max-width: 500px;
-  background-color: rgba(255, 255, 255, 1);
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
-  z-index: 2; /* Ensures it appears above the image */
-  
+
+@media (max-width: 768px){
+  .doctor-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
+  
 
 .info_box h2{
   font-size: 2rem;
@@ -433,7 +439,8 @@ button:hover {
   padding: 30px;
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: -50px;
+  margin-top: 150px;
+  height: 300px;
 }
 
 .box {
@@ -444,6 +451,7 @@ button:hover {
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  margin-top: 50px;
 }
 
 .box:hover {
@@ -466,11 +474,11 @@ button:hover {
 }
 
 .box_2 {
-  border-top: 4px solid var(--green);
+  border-top: 4px solid var(--blue);
 }
 
 .box_3 {
-  border-top: 4px solid var(--purple-light);
+  border-top: 4px solid var(--blue);
 }
 
 
@@ -484,4 +492,288 @@ button:hover {
 .carousel-style{
 
 
+}
+/*------------------------------------Mental Health--------------------------------- */
+a{
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: 1px;
+  color: black;
+
+}
+
+a:hover{
+  color: var(--blue-light);
+}
+
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 3fr));
+  gap: 50px;
+  padding: 100px;
+
+}
+
+
+
+.grid-item{
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+
+
+}
+.grid-item:hover {
+  transform: translateY(-10px);
+}
+
+
+.item-header {
+  padding: 15px;
+  background-color: #3498db;
+  color: white;
+}
+
+.item-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.item-content {
+  padding: 20px;
+}
+
+.item-content p {
+  margin-top: 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+.additional-resources{
+  margin-top: 120px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  padding: 20px 30px;
+  height: 100px;
+}
+
+h1,h3{
+  text-align: center;
+  color: var(--blue);
+  font-weight: 100;
+}
+
+.extra-links-mental{
+  max-width: 800px;
+  margin : 0 auto;
+
+}
+
+.extra-links-mental ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.extra-links-mental li{
+  margin: 10px 15px;
+}
+
+.extra-links-mental a{
+  display: inline-block;
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0 px;
+}
+
+
+.extra-links-mental a:hover{
+  color: var(--blue-light);
+}
+
+.extra-links-mental a::after{
+  content: '';
+  position : absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left:0;
+  background-color: var(--blue);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.extra-links-mental a:hover::after{
+  transform: scaleX(1);
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px){
+  .extra-links-mental-health{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .extra-links-mental ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .extra-links-mental li {
+        margin: 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}}
+
+/*------------------------------------Meditation Pics--------------------------------- */
+
+
+.image_container_wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+ 
+ 
+}
+
+.image_container {
+  flex: 1;
+  position: relative;
+  height: 700px;
+  margin-top: 8%;
+
+  
+}
+
+.image_placeholder {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 30px;
+}
+
+
+.med1_img, .med2_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.image_container :hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+.image_container button{
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 200px;
+  width: 200px;
+
+
+}
+
+.image_container button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.image_container button:hover::after {
+  transform: scaleX(1); 
+}
+
+.image_container button:hover {
+  color: var(--background-light); 
+}
+
+
+  
+.title  h1{
+  margin-top: 60px;
+  font-size: 50px;
+  font-weight:lighter;
+}
+
+.title-paragraph{
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 15px;
+  opacity: 0.5;
+  
+}
+
+
+.titlename{
+  color: var(--blue-light);
 }

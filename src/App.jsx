@@ -3,13 +3,18 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ConditionsPage from './pages/ConditionsPage';
 import BMIPage from "./pages/BMIPage";
+import MentalHealth from './pages/MentalHealth';
 import './index.css';
+import Meditate from './pages/meditate';
+
 
 function App() {
   return (
     <Router>
       <div>
+        
         <nav className='navbar'>
+          
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -19,6 +24,12 @@ function App() {
             </li>
             <li>
               <Link to="/bmi">BMI Calculator</Link>
+            </li>
+            <li>
+              <Link to="/mentalhealth">Mental Health</Link>
+            </li>
+            <li>
+              <Link to="/meditate">Meditate</Link>
             </li>
           </ul>
           <form>
@@ -34,6 +45,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/conditions" element={<ConditionsPage />} />
           <Route path="/bmi" element={<BMIPage />} />
+          <Route path="/mentalhealth" element={<MentalHealth />} />
+          <Route path='/meditate' element={<Meditate/>} />
         </Routes>
       </div>
     </Router>
