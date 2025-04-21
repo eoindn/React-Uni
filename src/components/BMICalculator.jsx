@@ -25,7 +25,7 @@ function BMICalculator() {
     }
   };
 
-  // Get class name based on BMI category
+  // gt  name based on BMI category
   const getCategoryClass = () => {
     if (category === 'Underweight') return 'category-underweight';
     if (category === 'Normal weight') return 'category-normal';

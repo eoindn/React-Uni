@@ -12,7 +12,7 @@ function HealthConditions() {
       description: 'A contagious respiratory illness caused by influenza viruses.',
       advice: 'Rest, drink fluids, and consult a doctor if symptoms worsen.',
     },
-    // Add more conditions as needed
+  
   ];
 
   return (

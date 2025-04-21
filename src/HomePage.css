@@ -1,0 +1,222 @@
+/* Base styles */
+.home-body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .title {
+    background-image: linear-gradient(135deg, #f5f7fa 25%, transparent 25%), 
+                      linear-gradient(225deg, #f5f7fa 25%, transparent 25%), 
+                      linear-gradient(45deg, #f5f7fa 25%, transparent 25%), 
+                      linear-gradient(315deg, #f5f7fa 25%, transparent 25%);
+    background-position: 20px 0, 20px 0, 0 0, 0 0;
+    background-size: 40px 40px;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    padding: 200px;
+  }
+  
+  .doctor-container {
+    width: 100%;
+  }
+  
+  .titlename {
+    display: grid;
+    justify-content: center;
+    color: #1370cd;
+    margin-bottom: 20px;
+
+  }
+  
+  .slogan {
+    text-align: center;
+    color: #000000;
+    margin-top: 0;
+  }
+
+ 
+  
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px 0;
+    background-color: #f5f7fa;
+  }
+  
+  .box {
+    background-color: white;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    height: 120px;
+  }
+  
+ 
+/* Base styles */
+.home-body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .title {
+    background-image: linear-gradient(135deg, #f5f7fa 25%, transparent 25%), 
+                      linear-gradient(225deg, #f5f7fa 25%, transparent 25%), 
+                      linear-gradient(45deg, #f5f7fa 25%, transparent 25%), 
+                      linear-gradient(315deg, #f5f7fa 25%, transparent 25%);
+    background-position: 20px 0, 20px 0, 0 0, 0 0;
+    background-size: 40px 40px;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .doctor-container {
+    width: 100%;
+  }
+  
+  .titlename {
+    display: flex;
+    justify-content: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .slogan {
+    text-align: center;
+    color: #3498db;
+    margin-top: 0;
+  }
+  
+  
+  
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px 0;
+    background-color: #f5f7fa;
+  }
+  
+  .box {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+  }
+  
+  .vertical-space {
+    margin: 60px 0;
+  }
+  
+  .vertical-space section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Section content styling */
+  .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .section-title {
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  
+  .section-description {
+    color: #7f8c8d;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 0;
+  }
+  
+  .additional-resources {
+    background-color: #f5f7fa;
+    padding: 20px;
+    margin-top: 40px;
+    height: 100%;
+  }
+  
+  .extra-links-mental-h1 {
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  .extra-links-mental ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .extra-links-mental li a {
+    color: #3498db;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: white;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .extra-links-mental li a:hover {
+    background-color: #ececec;
+    color: rgb(9, 122, 207);
+  }
+  
+
+  .hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100px);
+    transition: all 1s;
+  }
+  
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+  
+
+  .box_1 {
+    transition-delay: 200ms;
+  }
+  
+  .box_2 {
+    transition-delay: 400ms;
+  }
+  
+  .box_3 {
+    transition-delay: 600ms;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .boxes {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .box {
+      width: 80%;
+    }
+  }
