@@ -8,6 +8,7 @@ import Meditate from './pages/meditate';
 import BreathingCircle from './Advanced/meditation_app';
 import './index.css';
 import SearchPage from './components/SearchPage';
+import HealthDashboard from './Advanced/dashboard';
 
 function App() {
   return (
@@ -20,8 +21,9 @@ function App() {
             <li><Link to="/bmi">BMI Calculator</Link></li>
             <li><Link to="/mentalhealth">Mental Health</Link></li>
             <li><Link to="/meditate">Meditate</Link></li>
-            <li><Link to="/practice">Practice</Link></li>
             <li><Link to="/search">Search</Link></li>
+            <li><Link to="/meditation_app">Meditation App</Link></li>
+            <li><Link to="/Dashboard">Dashboard</Link></li>
           </ul>
           <form>
             <input className="search" type="text" placeholder="Search..." />
@@ -34,8 +36,8 @@ function App() {
           <Route path="/mentalhealth" element={<MentalHealth />} />
           <Route path='/meditate' element={<Meditate />} />
           <Route path="/meditation_app" element={<BreathingCircle/>} />
-          <Route path="/practice" element={<div>Practice Page</div>} />
           <Route path='/search' element={<SearchPage />} /> {/* Use the new component */}
+          <Route path='/Dashboard' element={<HealthDashboard/>} />
         </Routes>
       </div>
     </BrowserRouter>

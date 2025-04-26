@@ -33,43 +33,7 @@ function HomePage() {
           <div className="title-paragraph hidden"></div>
         </div>
         
-        <div className="boxes">
-          <div className="box box_1 hidden">
-            <h3>Diagnostics</h3>
-            <p>Comprehensive health screenings and tests</p>
-          </div>
-          <div className="box box_2 hidden">
-            <h3>Wellness</h3>
-            <p>Personalized wellness plans and support</p>
-          </div>
-          <div className="box box_3 hidden">
-            <h3>Community</h3>
-            <p>Resources and support for all backgrounds</p>
-          </div>
-        </div>
         
-        <div className="vertical-space">
-          <section className="hidden section-content">
-            <h1 className="section-title">Your Medical Health</h1>
-            <p className="section-description">We provide comprehensive medical services to everyone</p>
-          </section>
-          <section className="hidden section-content">
-            <h1 className="section-title">Expert Doctors</h1>
-            <p className="section-description">Our team consists of experienced medical professionals</p>
-          </section>
-          <section className="hidden section-content">
-            <h1 className="section-title">Modern Facilities</h1>
-            <p className="section-description">State-of-the-art equipment and comfortable environments</p>
-          </section>
-          <section className="hidden section-content">
-            <h1 className="section-title">Patient Care</h1>
-            <p className="section-description">Personalized attention and compassionate service</p>
-          </section>
-          <section className="hidden section-content">
-            <h1 className="section-title">Community Support</h1>
-            <p className="section-description">We're dedicated to improving community health outcomes</p>
-          </section>
-        </div>
         
         
         <div className="additional-resources">
