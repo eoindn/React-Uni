@@ -312,22 +312,22 @@ button:hover {
 
 .category-underweight {
   font-weight: bold;
-  color: #3182ce; /* blue */
+  color: #3182ce; 
 }
 
 .category-normal {
   font-weight: bold;
-  color: #38a169; /* green */
+  color: #38a169; 
 }
 
 .category-overweight {
   font-weight: bold;
-  color: #d69e2e; /* yellow */
+  color: #d69e2e; 
 }
 
 .category-obese {
   font-weight: bold;
-  color: #e53e3e; /* red */
+  color: #e53e3e; 
 }
 
 .bmi-info {

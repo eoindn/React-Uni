@@ -1,0 +1,377 @@
+:root {
+  /* Primary Colors */
+  --blue: #3498db; /* Blue */
+  --blue-light: #5dade2; /* Light Blue */
+  --blue-dark: #2c3e50; /* Dark Blue */
+  
+  /* Secondary Colors */
+  --red: #e74c3c; /* Red */
+  --red-light: #f1948a; /* Light Red */
+  --red-dark: #c0392b; /* Dark Red */
+
+  /* Neutral Colors */
+  --text-dark: #333333; /* Dark Gray (for text) */
+  --background-light: #f4f4f4; /* Light Gray (background) */
+  --border-light: #dddddd; /* Border Gray */
+  
+  /* Accent Colors */
+  --yellow: #f39c12; /* Yellow */
+  --yellow-light: #f1c40f; /* Light Yellow */
+  --orange-dark: #d35400; /* Dark Orange */
+  
+  /* Success & Error */
+  --green: #2ecc71; /* Green */
+  --green-light: #58d68d; /* Light Green */
+  --error-red: #e74c3c; /* Error Red */
+  
+  /* Link and Highlight */
+  --link-blue: #2980b9; /* Blue link */
+  --link-hover: #1abc9c; /* Link hover color */
+
+  /* Neon Colors */
+  --neon-green: #39ff14; /* Neon Green */
+  --neon-pink: #ff6ec7; /* Neon Pink */
+  --neon-blue: #1f51ff; /* Neon Blue */
+  --neon-yellow: #f7ff00; /* Neon Yellow */
+  --neon-orange: #ff5e00; /* Neon Orange */
+  
+  /* Purple and Pink Shades */
+  --purple-light: #9b59b6; /* Light Purple */
+  --purple-dark: #8e44ad; /* Dark Purple */
+  --pink-light: #ff66b2; /* Light Pink */
+  --pink-dark: #e91e63; /* Dark Pink */
+}
+
+
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+
+}
+
+.card{
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.5);
+  padding:20px;
+  margin-top: 20px;
+  flex:  1  1 300px
+}
+
+.input {
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  
+}
+
+
+
+.card-prompt{
+
+  width: 100%;
+}
+
+.input-button input{
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: white;
+  border-color: white;
+  text-align: center;
+}
+
+
+.input-button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+
+.button-s :hover{
+  background-color: var(--blue-light);
+  
+}
+.progress-container{
+  height: 0.75rem;
+  background-color:  #3182ce;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.progress-bar{
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.5s ease;
+}
+
+
+.progress-bar {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.5s ease;
+}
+
+.water-progress {
+  background-color: #2563eb;
+}
+
+.calories-progress {
+  background-color: #ea580c;
+}
+
+.steps-progress {
+  background-color: #16a34a;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.progress-min {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.progress-goal {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.water-goal {
+  color: #2563eb;
+}
+
+.calorie-goal {
+  color: #ea580c;
+}
+
+.stepsgoal {
+  color: #16a34a;
+}
+
+
+
+/* Medication Styling */
+.med-icon-bg {
+  background-color: var(--purple-light);
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.med-list {
+  margin-top: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.med-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  background: var(--background-light);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.med-item.taken {
+  background: #f0f7f0;
+  border-left: 4px solid var(--green);
+}
+
+.med-info h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.med-info p {
+  margin: 5px 0 0;
+  font-size: 0.85rem;
+  color: var(--text-dark);
+}
+
+.med-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.btn-take {
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.btn-taken {
+  background: #ddd;
+  color: var(--text-dark);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: not-allowed;
+}
+
+.btn-delete {
+  background: var(--error-red);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.med-controls {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-add-med {
+  background: var(--link-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.no-meds {
+  text-align: center;
+  color: var(--text-dark);
+  padding: 20px;
+}
+
+/* Medication Form */
+.med-form {
+  margin-top: 15px;
+  background: var(--background-light);
+  padding: 15px;
+  border-radius: 8px;
+
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.btn-submit {
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background: var(--error-red);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+
+.icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.droplet-icon-bg {
+  background-color: var(--blue);
+  color: white;
+}
+
+.flame-icon-bg {
+  background-color: var(--red);
+  color: white;
+ 
+}
+
+.green-icon-bg {
+  background-color: var(--green);
+  color: white;
+}
+
+
+.reset-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-reset {
+  background: var(--error-red);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title h1 {
+  text-align: center;
+  color: var(--blue-dark);
+  margin-bottom: 20px;
+}
+
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
+}
