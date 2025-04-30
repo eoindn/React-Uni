@@ -6,10 +6,10 @@ import { alignProperty } from '@mui/material/styles/cssUtils';
 
 const HealthDashboard = () => {
   
-  //set variables
+  //variables
   const[dailyData, setDailyData] = useState({
     waterIntake : 0, 
-    calories: 0 , 
+    calories: 0, 
     steps : 0 ,
   })
   const[meds, setMeds] = useState([]);
@@ -23,9 +23,9 @@ const HealthDashboard = () => {
 
   //daily data unputs 
   const [quickInputs, setQuickInputs] = useState({
-    water: '',
-    calories: '',
-    frequency: ''
+    water: '2000',
+    calories: '2000',
+    frequency: '2000'
   })
 
 
@@ -50,7 +50,7 @@ const HealthDashboard = () => {
       if(!isNaN (value)){
         setDailyData(prev =>({
           ...prev,
-          [type === 'water' ? waterIntake : value] :prev[type === 'water' ? waterIntake : type] + value
+          [type === 'water' ? 'waterIntake' : type] :prev[type === 'water' ? 'waterIntake' : type] + value
         }));
         setQuickInputs(prev =>({...prev,[type]:''}))
       }
@@ -62,14 +62,13 @@ const HealthDashboard = () => {
     if(newMedication.name && newMedication.dose && newMedication.time){
       setmeds(prev => [...prev,{...newMedication, id: Date.now(),takenToday:false}]);
       setNewMedication({name:'',dose:'',time:'',frequency:''});
-      setShowMedFrom:(false);
+      setShowMedFrom(false);
     }
   }
 
   const tickMeds = (medId) => {
     if(!medId){
-        throw new Error("No medication id")
-        return;
+        console.error("No medication found")
     }
     try{
         setmeds(prev=>{
@@ -78,7 +77,7 @@ const HealthDashboard = () => {
                 throw new Error(`medication id with id ${medId} not found`)
             }
             return prev.map(med=>
-                med.id == medId ? {...med,takenToday:true} : med
+                med.id === medId ? {...med,takenToday:true} : med
             );
         });
     }catch(error){
@@ -88,11 +87,11 @@ const HealthDashboard = () => {
     
 
   const deleteMed = (medId) => {
-    setMeds(prev =>(prev.filter(med.id !== medId)))
+    setMeds(prev => prev.filter(med !== medId));
   }
 
   const reset = () => {
-    dailyData({water:'',steps:'',calories:''});
+    dailyData({water:0,steps:0,calories:0});
     setMeds(prev => prev.map(med =>({...med, takenToday:(false)})));
   }
 
@@ -101,7 +100,7 @@ const HealthDashboard = () => {
 
 return(
   <div className='dashboard-container'>
-    <div className='titl'>
+    <div className='title'>
       <h1>Personal Health Tracker</h1>
       <div className='title-divider'>
         <div className='card-container'>
@@ -125,7 +124,7 @@ return(
               <button onClick={() => handleQuickInput('steps')}>Add</button>
               <div className='progress-container'>
                 <div className='progress-bar steps-progress'
-                style={{width:`${Math.min((dailyData.waterIntake / 10000) * 100,100)}%`}} 
+                style={{width:`${Math.min((dailyData.steps / 2000) * 100,100)}%`, color:"ora"}} 
                 />
               </div>
               <div className='prog-label'>
